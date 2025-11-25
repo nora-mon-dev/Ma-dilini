@@ -1,0 +1,1147 @@
+/* ========================================
+   BASE STYLES - MODERN MINIMAL REDESIGN
+   ======================================== */
+
+/* Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #faf8f6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+    font-size: clamp(16px, 2.5vw, 18px);
+    margin: 0;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c2c2c;
+}
+
+/* ========================================
+   BACK TO TOP BUTTONS - FIXED
+   ======================================== */
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #571b03;
+    padding: 14px 18px;
+    border-radius: 50%;
+    font-size: clamp(18px, 3vw, 22px);
+    text-decoration: none;
+    text-align: center;
+    background: white;
+    border: 2px solid #571b03;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+    cursor: pointer;
+    min-width: 48px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(87, 27, 3, 0.15);
+}
+
+@media screen and (min-width: 769px) {
+    .back-to-top {
+        right: clamp(60px, 10vw, 150px);
+        bottom: clamp(20px, 5vh, 60px);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .back-to-top {
+        right: clamp(100px, 15vw, 250px);
+        bottom: clamp(30px, 8vh, 100px);
+    }
+}
+
+.back-to-top-special {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #571b03;
+    padding: 14px 18px;
+    border-radius: 50%;
+    font-size: clamp(18px, 3vw, 22px);
+    text-decoration: none;
+    text-align: center;
+    background: white;
+    border: 2px solid #571b03;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+    cursor: pointer;
+    min-width: 48px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(87, 27, 3, 0.15);
+}
+
+@media screen and (min-width: 769px) {
+    .back-to-top-special {
+        right: clamp(30px, 6vw, 80px);
+        bottom: clamp(20px, 5vh, 60px);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .back-to-top-special {
+        right: clamp(50px, 8vw, 120px);
+        bottom: clamp(30px, 8vh, 100px);
+    }
+}
+
+.back-to-top:hover,
+.back-to-top-special:hover,
+.back-to-top:focus,
+.back-to-top-special:focus {
+    background: #571b03;
+    color: white;
+    outline: 3px solid #C9A961;
+    outline-offset: 2px;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(87, 27, 3, 0.25);
+}
+
+@media screen and (max-width: 400px) {
+    .back-to-top {
+        right: 10px;
+        bottom: 10px;
+        padding: 12px 14px;
+        font-size: 18px;
+    }
+    
+    .back-to-top-special {
+        right: 10px;
+        bottom: 10px;
+        padding: 12px 14px;
+        font-size: 18px;
+    }
+}
+
+/* ========================================
+   LOGO
+   ======================================== */
+
+.logo {
+    margin-top: 10px;
+    height: clamp(40px, 8vw, 55px);
+    border-radius: 8px;
+    max-width: 100%;
+}
+
+/* ========================================
+   TYPOGRAPHY - MODERN & CLEAN
+   ======================================== */
+
+h2, h3, h4, h5 {
+    color: #571b03;
+    line-height: 1.3;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    margin-bottom: 1.2rem;
+}
+
+h3 {
+    font-size: clamp(1.35rem, 3.5vw, 1.85rem);
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-size: clamp(1.15rem, 3vw, 1.5rem);
+    margin-bottom: 0.8rem;
+}
+
+/* ========================================
+   TABLES - MODERN MINIMAL DESIGN
+   ======================================== */
+
+table {
+    border-spacing: 0;
+    margin: 1.5rem 0;
+    width: 100%;
+    border-collapse: separate;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+@media screen and (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    thead, tbody, tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+}
+
+th, td {
+    padding: clamp(12px, 2vw, 16px);
+    border: none;
+    vertical-align: middle;
+    word-wrap: break-word;
+    white-space: normal;
+    min-width: 80px;
+}
+
+@media screen and (min-width: 769px) {
+    th, td {
+        min-width: 100px;
+    }
+}
+
+td {
+    width: auto;
+    max-width: 250px;
+    border-bottom: 1px solid #f0ebe6;
+}
+
+th {
+    background-color: #571b03;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1.5rem 0;
+    border-radius: 12px;
+}
+
+/* ========================================
+   ALPHABET TABLES - MODERNIZED
+   ======================================== */
+
+.abc,
+.anim {
+    background: rgb(251, 251, 243);
+    border-radius: 12px;
+}
+
+.abc-letter-nonclick {
+    background-color: #571b03;
+    color: white;
+    font-weight: 600;
+}
+
+.abc-letter {
+    background-color: #571b03;
+    color: white;
+    font-weight: 600;
+}
+
+.abc-letter td {
+    cursor: pointer;
+    min-height: 48px;
+    min-width: 48px;
+    transition: all 0.2s ease;
+}
+
+.abc-letter td:hover,
+.abc-letter td:focus {
+    background-color: #7d2604;
+    color: white;
+    outline: 3px solid #C9A961;
+    transform: scale(1.05);
+}
+
+.abc-img td {
+    border-bottom: none;
+    padding: clamp(15px, 3vw, 25px);
+}
+
+.abc-word-nonclick {
+    border-top: none;
+    text-align: center;
+    background-color: #f9f5f0;
+}
+
+.abc-word td {
+    border-top: none;
+    text-align: center;
+    background-color: #f9f5f0;
+    cursor: pointer;
+    min-height: 48px;
+    transition: all 0.2s ease;
+}
+
+.abc-word td:hover,
+.abc-word td:focus {
+    background-color: #C9A961;
+    color: white;
+    outline: 3px solid #571b03;
+    transform: translateY(-2px);
+}
+
+.abc img {
+    height: auto;
+    width: 100%;
+    max-width: 200px;
+    max-height: 250px;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* ========================================
+   ANIMAL TABLES - MODERNIZED
+   ======================================== */
+
+.anim-img td {
+    border-bottom: none;
+    padding: clamp(15px, 3vw, 25px);
+    background-color: rgb(251, 251, 243);
+}
+
+.anim-word td {
+    border-top: none;
+    text-align: center;
+    background-color: #f9f5f0;
+    cursor: pointer;
+    min-height: 48px;
+    transition: all 0.2s ease;
+}
+
+.anim-word td:hover,
+.anim-word td:focus {
+    background-color: #C9A961;
+    color: white;
+    outline: 3px solid #571b03;
+    transform: translateY(-2px);
+}
+
+.anim img {
+    height: auto;
+    width: 100%;
+    max-width: 200px;
+    max-height: 250px;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* ========================================
+   NOTIFICATION BOXES - MODERN CARDS
+   ======================================== */
+
+.note,
+.idea {
+    background: linear-gradient(135deg, #fff9f0 0%, #faf5ed 100%);
+    padding: clamp(16px, 3vw, 24px);
+    border-radius: 12px;
+    color: #571b03;
+    border-left: 4px solid #C9A961;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.note li,
+.idea li {
+    padding: 8px 0;
+    line-height: 1.6;
+}
+
+.idea li::marker {
+    color:#970c10;
+    font-weight: thick
+}
+
+.note a,
+.idea a {
+    text-decoration: none;
+    color: #571b03;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.note a:hover,
+.note a:focus,
+.idea a:hover,
+.idea a:focus {
+    border-bottom-color: #C9A961;
+    outline: 2px solid #C9A961;
+}
+
+/* ========================================
+   DIVIDERS
+   ======================================== */
+
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #e8dfd4, transparent);
+    width: 100%;
+    margin: 2.5rem 0;
+}
+
+/* ========================================
+   INDEX PAGE
+   ======================================== */
+
+.link-list {
+    background: #f9f5f0;
+    border-radius: 8px;
+}
+
+.index-h1-a {
+    color: white;
+}
+
+.index-h1-a:hover,
+.index-h1-a:focus {
+    color: #C9A961;
+    outline: 3px solid #C9A961;
+}
+
+/* ========================================
+   AUDIO ICON - MODERNIZED
+   ======================================== */
+
+.audio-icon {
+    display: inline-block;
+    background-color: white;
+    width: clamp(36px, 5vw, 44px);
+    height: clamp(36px, 5vw, 44px);
+    min-width: 48px;
+    min-height: 48px;
+    border: 2px solid #571b03;
+    border-radius: 50%;
+    position: relative;
+    float: right;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.audio-icon::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 15px solid #571b03;
+    border-radius: 10%;
+}
+
+.audio-icon:hover,
+.audio-icon:focus {
+    background-color: #571b03;
+    border-color: #571b03;
+    outline: 3px solid #C9A961;
+    outline-offset: 2px;
+    transform: scale(1.1);
+    box-shadow: 0 4px 16px rgba(87, 27, 3, 0.2);
+}
+
+.audio-icon:hover::after,
+.audio-icon:focus::after {
+    border-left-color: white;
+}
+
+/* ========================================
+   VIDEO - MODERN CONTAINER
+   ======================================== */
+
+iframe {
+    display: block;
+    margin: 1.5rem auto;
+    border-radius: 12px;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   NAVIGATION - HEADER - MODERN MINIMAL
+   ======================================== */
+
+.menu-checkbox {
+    display: none;
+}
+
+header {
+    background-color: #571b03;
+    margin-top: 0;
+    width: 100%;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    height: auto;
+    min-height: 70px;
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    min-height: 70px;
+    padding: 15px clamp(20px, 4vw, 40px);
+}
+
+.home {
+    font-size: clamp(22px, 5vw, 32px);
+    font-weight: 700;
+    color: white;
+    letter-spacing: -0.02em;
+}
+
+.home a:link,
+.home a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.home a:focus {
+    outline: 3px solid #C9A961;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.menu-contact {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(1.5rem, 5vw, 3rem);
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.menu-contact a {
+    margin-top: 0;
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.menu-contact a:hover,
+.menu-contact a:focus {
+    background: rgba(255, 255, 255, 0.1);
+    outline: 2px solid #C9A961;
+}
+
+/* ========================================
+   HAMBURGER MENU - MODERN STYLE
+   ======================================== */
+
+.menu-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    cursor: pointer;
+    padding: 0.7rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    user-select: none;
+    min-width: 48px;
+    min-height: 48px;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    outline: 3px solid #C9A961;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    width: 20px;
+    height: 16px;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    display: block;
+    height: 2.5px;
+    width: 100%;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-checkbox:checked + .header-content .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-checkbox:checked + .header-content .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-checkbox:checked + .header-content .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ========================================
+   NAVIGATION BOX - MODERN SLIDE-IN
+   ======================================== */
+
+.nav-box {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: min(280px, 85vw);
+    height: 100vh;
+    background: white;
+    box-shadow: -8px 0 32px rgba(0, 0, 0, 0.15);
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    padding-top: 90px;
+    border-radius: 0;
+    margin-top: 0;
+    visibility: hidden;
+    overflow-y: auto;
+}
+
+.menu-checkbox:checked ~ .nav-box {
+    right: 0;
+    visibility: visible;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 1.5rem 0;
+    color: #571b03;
+    gap: 0;
+    margin: 0;
+}
+
+.navigation li {
+    border-bottom: 1px solid #f0ebe6;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.navigation li a {
+    display: block;
+    padding: 1.2rem 2rem;
+    color: #571b03;
+    text-decoration: none;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-left: 4px solid transparent;
+    min-height: 48px;
+}
+
+.navigation li a:hover,
+.navigation li a:focus {
+    background: #faf5f0;
+    border-left-color: #C9A961;
+    color: #571b03;
+    outline: 2px solid #C9A961;
+    padding-left: 2.5rem;
+}
+
+.navigation li a:link,
+.navigation li a:visited {
+    color: #571b03;
+    text-decoration: none;
+}
+
+/* ========================================
+   LINKS - MODERN STYLING
+   ======================================== */
+
+.link {
+    color: #571b03;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+    font-weight: 500;
+}
+
+.link ul {
+    color: #571b03;
+}
+    
+.link:hover,
+.link:focus {
+    border-bottom-color: #C9A961;
+    outline: 2px solid #C9A961;
+}
+
+/* ========================================
+   OVERLAY - MODERN BACKDROP
+   ======================================== */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    z-index: 999;
+    pointer-events: none;
+    backdrop-filter: blur(2px);
+}
+
+.menu-checkbox:checked ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.overlay label {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+/* ========================================
+   MAIN SECTIONS - MODERN CARDS
+   ======================================== */
+
+main {
+    margin: clamp(50px, 8vw, 90px) clamp(20px, 5vw, 50px) clamp(20px, 4vw, 30px);
+    padding: 0 clamp(10px, 2vw, 15px);
+}
+
+.main-section {
+    border-radius: 16px;
+    width: 100%;
+    max-width: 1100px;
+    padding: 0 clamp(1.5rem, 3vw, 2.5rem);
+    overflow: hidden;
+    padding-bottom: 15px;
+    margin: clamp(50px, 8vw, 90px) auto 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.main-section-body {
+    background: white;
+    border-radius: 16px;
+    max-width: 1100px;
+    padding: 0 clamp(1.5rem, 3vw, 2.5rem);
+    padding-bottom: 15px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.section-div {
+    background: linear-gradient(135deg, #571b03 0%, #6d2204 100%);
+    color: white;
+    padding: clamp(2rem, 4vw, 3rem) clamp(2rem, 4vw, 3rem) 0;
+    border-radius: 16px 16px 0 0;
+    margin: 0 calc(-1 * clamp(1.5rem, 3vw, 2.5rem));
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section-div p {
+    font-size: clamp(17px, 3vw, 19px);
+    margin: 0;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+.nav-div {
+    padding: clamp(1.5rem, 3vw, 2rem) clamp(1.5rem, 3vw, 2rem) 1.5rem;
+    margin: 0 calc(-1 * clamp(1.5rem, 3vw, 2.5rem));
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(12px, 2vw, 16px);
+    flex-wrap: wrap;
+    padding-left: 0;
+}
+
+.nav-items li {
+    list-style-type: none;
+    border: 2px solid #e8dfd4;
+    padding: clamp(12px, 2vw, 16px) clamp(18px, 3vw, 24px);
+    border-radius: 8px;
+    background: white;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav-items li:hover,
+.nav-items li:focus-within {
+    background: #C9A961;
+    border-color: #C9A961;
+    transform: translateY(-2px);
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 4px 12px rgba(201, 169, 97, 0.3);
+}
+
+.nav-items a:link,
+.nav-items a:visited {
+    color: #571b03;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-items li:hover a,
+.nav-items li:focus-within a {
+    color: white;
+}
+
+.nav-items a:focus {
+    outline: 2px solid #571b03;
+}
+
+.sections {
+    background-color: white;
+    margin: 0 calc(-1 * clamp(1.5rem, 3vw, 2.5rem));
+    padding: clamp(2rem, 4vw, 3rem) clamp(2rem, 4vw, 3rem) 2.5rem;
+    border-radius: 0 0 16px 16px;
+}
+
+/* ========================================
+   INFORMATION BOX - MODERN CARD
+   ======================================== */
+
+.divbox {
+    border: 2px solid #e8dfd4;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    padding: clamp(16px, 3vw, 24px) clamp(20px, 4vw, 30px);
+    background: #fafafa;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.heading3 {
+    color: #571b03;
+    font-weight: 600;
+    margin-top: 0;
+}
+
+/* ========================================
+   IMAGES - MODERN STYLING
+   ======================================== */
+
+.greeting {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    float: right;
+    border-radius: 12px;
+    margin: 0 0 15px 15px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+    .greeting {
+        float: none;
+        margin: 25px auto;
+        display: block;
+    }
+}
+
+/* ========================================
+   TIME TABLE
+   ======================================== */
+
+.table-container {
+    display: flex;
+    gap: clamp(12px, 3vw, 20px);
+    margin-top: 1.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ========================================
+   BODY PARTS - MODERN GRID
+   ======================================== */
+
+.body-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(35px, 8vw, 100px);
+    margin-bottom: clamp(50px, 10vw, 120px);
+    justify-content: center;
+}
+
+.part {
+    width: clamp(90px, 15vw, 130px);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.part:hover {
+    transform: translateY(-4px);
+}
+
+.part img {
+    width: 100%;
+    max-width: 90px;
+    height: auto;
+    max-height: 210px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+}
+
+.part p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    color: #2c2c2c;
+    margin: 0;
+    font-size: clamp(17px, 3vw, 21px);
+    user-select: none;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+/* ========================================
+   METHOD SECTIONS - MODERN CARDS
+   ======================================== */
+
+.demo-content {
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.method-section {
+    background: white;
+    padding: clamp(1.5rem, 3vw, 2rem);
+    margin: 2rem 0;
+    border-radius: 12px;
+    border-left: 4px solid #571b03;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.method-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.method-section h3 {
+    color: #571b03;
+    margin-top: 0;
+}
+
+.pros-cons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.pros,
+.cons {
+    background: #fafafa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid #e8dfd4;
+}
+
+.pros h4 {
+    color: #2d7d32;
+    margin-top: 0;
+}
+
+.cons h4 {
+    color: #d32f2f;
+    margin-top: 0;
+}
+
+.pros ul,
+.cons ul {
+    margin: 0.8rem 0;
+    padding-left: 1.5rem;
+    line-height: 1.7;
+}
+
+/* ========================================
+   FOOTER - MODERN MINIMAL
+   ======================================== */
+
+footer {
+    background: #571b03;
+    padding: 30px 10px;
+    color: white;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+}
+
+footer li {
+    list-style-type: none;
+    padding: 0 clamp(1rem, 5vw, 3rem);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+footer .footer-page a:hover,
+footer .footer-page a:focus {
+    background: rgba(255, 255, 255, 0.1);
+    outline: 2px solid #C9A961;
+}
+
+/* ========================================
+   ACCESSIBILITY UTILITIES
+   ======================================== */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #571b03;
+    color: white;
+    padding: 10px 16px;
+    text-decoration: none;
+    z-index: 9999;
+    border-radius: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid #C9A961;
+}
+
+*:focus-visible {
+    outline: 3px solid #C9A961;
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ========================================
+   MEDIA QUERIES - OPTIMIZED
+   ======================================== */
+
+@media screen and (min-width: 1400px) {
+    .main-section,
+    .main-section-body {
+        max-width: 1250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-text {
+        display: none;
+    }
+    
+    .nav-items {
+        flex-direction: column;
+    }
+    
+    .nav-items li {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .table-container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 640px) and (orientation: landscape) {
+    .nav-box {
+        padding-top: 70px;
+    }
+    
+    .navigation li a {
+        padding: 0.9rem 1.5rem;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+    .back-to-top,
+    .back-to-top-special,
+    .menu-toggle,
+    .nav-box,
+    .overlay {
+        display: none;
+    }
+    
+    body {
+        background: white;
+    }
+    
+    .main-section,
+    .main-section-body {
+        box-shadow: none;
+    }
+}
